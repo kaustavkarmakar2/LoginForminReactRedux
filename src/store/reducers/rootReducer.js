@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import {reducer as reduxFormReducer} from 'redux-form';
-import LoginReducer from './loginReducer';
+import LoginReducer from './loginReducer'; 
 
 const rootReducer= combineReducers({
     form:reduxFormReducer,

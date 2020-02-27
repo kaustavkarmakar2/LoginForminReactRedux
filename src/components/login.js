@@ -1,53 +1,48 @@
-import React from "react";
 
-
-import Store from "../store/index";
-
-
+import React from 'react';
+import { connect } from 'react-redux';
+import { Field, Form } from 'react-redux-form';
 
 
 class Login extends React.Component {
-    // handleSubmit(user) {
-    //     let { dispatch } = this.props;
-    
-    //     // Do whatever you like in here.
-    //     // You can use actions such as:
-    //     // dispatch(actions.submit('user', somePromise));
-    //     // etc.
-    //   }
-    render() {
-       
+    state = {
+        user:[],
         
-        
-       
-        return(
-       
-           <div>
-                <div className="imgcontainer">
-                    
-                </div>
-
-                <div style={{backgroundColor:'Blue'}}>
-                    <label ><b>Username</b></label>
-                    <input id="uname" type="email" placeholder="Enter Username" name="uname" required/>
-
-                    <label ><b>Password</b></label>
-                    <input id="psw" type="password" placeholder="Enter Password" name="pspsw" required/>
-
-                    <button type="submit">Login</button>
-                    
-                    <input type="checkbox" checked="checked" name="remember"/> 
-                </div>  
-                
-
-                <div className="container" style={{backgroundColor:'Red'}}>
-                    <button type="button" className="cancelbtn" onChange={e=> e.target.value} >submit</button>
-                    
-                </div>
-                </div>
-            
-        )
     }
+  handleSubmit(user) {
+    //  let { dispatch } = this.props;
 
+    // Do whatever you like in here.
+    // You can use actions such as:
+    //  dispatch(user);
+    console.log(user,"hhhh");
+    // etc.
+  }
+  render() {
+   
+    return (
+      <Form model="user"
+        onSubmit={(user) => this.handleSubmit(user)}>
+        <Field model="user.email">
+          <label>Email:</label>
+          <input type="email" />
+        </Field>
+
+        <Field model="user.pass">
+          <label>Password:</label>
+          <input type="pass" />
+        </Field>
+
+        <button type="submit" onClick={this.state.handleSubmit}>Login
+         
+        </button>
+      </Form>
+    );
+  }
 }
-export default Login;
+
+function mapDispatchToProps(state) {
+  return { user: state.user };
+}
+
+export default connect(mapDispatchToProps)(Login);

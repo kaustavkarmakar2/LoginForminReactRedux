@@ -6,17 +6,19 @@ import Home from "./components/home";
 import Login from "./components/login";
 
 
-
-
 function App() {
   
   return (
+    
     <BrowserRouter>
       <div className="App">
+      
         <Navbar/>
-        <Switch>
+        <Switch >
           <Route path="/home" component={Home}/>
-          <Route path="/login" component={Login} />
+          
+          <Route path="/login" component={Login}/>
+          
         </Switch>
       </div>
     </BrowserRouter>
