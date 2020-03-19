@@ -11,7 +11,7 @@ class Navbar extends React.Component {
 
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home">
+              <NavLink className="nav-link" to="/">
                 Home
               </NavLink>
             </li>
