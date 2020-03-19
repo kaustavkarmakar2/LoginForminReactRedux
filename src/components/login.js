@@ -38,7 +38,7 @@ class Login extends React.Component {
 
                 <Field model="user.pass">
                   <label>Password:</label>
-                  <input type="pass" />
+                  <input  type="password" />
                 </Field>
 
                 <button

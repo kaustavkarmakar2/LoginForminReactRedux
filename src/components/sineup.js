@@ -21,7 +21,7 @@ class sineup extends Component {
         <div>
           <div className="login-reg-panel">
             <div className="white-panel">
-              <div>
+              <div >
                 <h1 style={{color:'black'}}>Signup to Get a call</h1>
                 <Form
                   model="user"
@@ -30,17 +30,18 @@ class sineup extends Component {
                     paddingTop: "3%",
                     paddingBottom: "100px"
                   }}
+                 
                   onSubmit={user => this.handleSubmit(user)}
                 >
                   <Field model="user.email">
-                    <label>Email:</label>
-                    <input type="email" />
+                    <label >Email:</label>
+                    <input type="email"  />
                   </Field>
-                  <Field model="user.service">
+                  <Field model="user.service"  >
                     <label >Choose a car:</label>
 
-                    <select id="cars">
-                      <option value="null" disabled>Choose a type of service</option>
+                    <select id="cars" style={{backgroundColor:'white'}}>
+                      <option  disabled>Choose a type of service</option>
                       <option value="saab">Saab</option>
                       <option value="opel">Opel</option>
                       <option value="audi">Audi</option>
@@ -48,12 +49,12 @@ class sineup extends Component {
                   </Field>
                   <Field model="user.phone">
                     <label>Phone Number:</label>
-                    <input type="phn" />
+                    <input type="tel"  required maxLength="10"/>
                   </Field>
 
                   <Field model="user.pass">
                     <label>Password:</label>
-                    <input type="pass" />
+                    <input type="password"   required />
                   </Field>
 
                   <button
