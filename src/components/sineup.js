@@ -22,7 +22,7 @@ class sineup extends Component {
           <div className="login-reg-panel">
             <div className="white-panel">
               <div>
-                <h1>Signup to Get a call</h1>
+                <h1 style={{color:'black'}}>Signup to Get a call</h1>
                 <Form
                   model="user"
                   style={{
