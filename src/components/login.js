@@ -21,7 +21,14 @@ class Login extends React.Component {
   render() {
    
     return (
-      <Form model="user"
+      <div>
+      <div className="login-reg-panel">
+		
+							
+		<div className="white-panel">
+      <div >
+      <h1>Login</h1>
+			<Form model="user" style={{backgroundColor:'#00005c',paddingTop: '3%',paddingBottom:'100px'}}
         onSubmit={(user) => this.handleSubmit(user)}>
         <Field model="user.email">
           <label>Email:</label>
@@ -33,10 +40,17 @@ class Login extends React.Component {
           <input type="pass" />
         </Field>
 
-        <button type="submit" onClick={this.state.handleSubmit}>Login
-         
+        <button type="submit" className="btn btn-primary"   onClick={this.state.handleSubmit}>Login
+        
         </button>
+        
       </Form>
+			</div>
+		
+		</div>
+  </div>
+  </div>
+      
     );
   }
 }
