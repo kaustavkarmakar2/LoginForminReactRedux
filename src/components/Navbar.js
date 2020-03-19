@@ -5,7 +5,7 @@ class Navbar extends React.Component {
     return (
       <div className="header">
         <nav className="navbar navbar-expand-sm bg-light">
-          <Link to="/home" className="brand-logo">
+          <Link to="/" className="brand-logo">
             BrandLogo
           </Link>
 
